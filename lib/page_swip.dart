@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:zestora/futcher/ui/pages/auth/sing_in_page.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_1.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_2.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screans_3.dart';
@@ -30,6 +31,7 @@ class _PageSwipState extends State<PageSwip> {
         SplashScrean1() , 
         SplashScrean2() , 
         SplashScreans3() ,
+        SingInPage() ,
       ],
     );
   }
