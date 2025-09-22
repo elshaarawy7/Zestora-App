@@ -53,17 +53,7 @@ class HomePage extends StatelessWidget {
 
             SizedBox(height: 10,) , 
 
-            Row(
-              children: [
-                CustemCatogry() , 
-                SizedBox(width: 20,) ,
-                CustemCatogry() ,
-                SizedBox(width: 20,) ,
-                CustemCatogry() ,
-                SizedBox(width: 20,) ,
-                CustemCatogry(),
-              ],
-            ) ,
+            CustemCatogory()
 
             
 
