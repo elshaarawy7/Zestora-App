@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zestora/core/utils/color_app.dart';
 import 'package:zestora/futcher/ui/widgets/custem_batton.dart';
@@ -5,8 +6,8 @@ import 'package:zestora/futcher/ui/widgets/custem_driver.dart';
 import 'package:zestora/futcher/ui/widgets/custem_item_scoil.dart';
 import 'package:zestora/futcher/ui/widgets/custem_text_filed.dart';
 
-class SingInPage extends StatelessWidget {
-  SingInPage({super.key});
+class SingUpPage extends StatelessWidget {
+   SingUpPage({super.key}); 
 
   final fromkey = GlobalKey<FormState>();
 
@@ -106,11 +107,7 @@ class SingInPage extends StatelessWidget {
 
                 SizedBox(height: 20),
 
-                CustomGreenButton(
-                  text: "Sign in", 
-                  onPressed: () {
-                    
-                  }),
+                CustomGreenButton(text: "Sign in", onPressed: () {}),
 
                 SizedBox(height: 20),
 

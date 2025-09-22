@@ -27,6 +27,7 @@ class SplashScrean2 extends StatelessWidget {
           ) , 
           maxLines: 2, 
           overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.center,
           ) , 
           
         ],
