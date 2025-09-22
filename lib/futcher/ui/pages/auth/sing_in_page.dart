@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:zestora/core/utils/app_router.dart';
 import 'package:zestora/core/utils/color_app.dart';
 import 'package:zestora/futcher/ui/widgets/custem_batton.dart';
 import 'package:zestora/futcher/ui/widgets/custem_driver.dart';
@@ -109,7 +111,7 @@ class SingInPage extends StatelessWidget {
                 CustomGreenButton(
                   text: "Sign in", 
                   onPressed: () {
-                    
+
                   }),
 
                 SizedBox(height: 20),
@@ -146,7 +148,9 @@ class SingInPage extends StatelessWidget {
                     ),
 
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.go(AppRouter.KSingUP);
+                      },
 
                       child: Text(
                         "Sign Up",
