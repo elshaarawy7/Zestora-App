@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final IconData prefixIcon;
-   final String? Function(String?)? validator; // 👈 هنا الفالديتور المتغير
+    final String? Function(String?)? validator; // 👈 هنا الفالديتور
   final TextEditingController? controller;
   final bool obscureText;
 
@@ -20,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: validator,
       obscureText: obscureText,
       decoration: InputDecoration(
         filled: true,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:zestora/core/utils/app_router.dart';
 import 'package:zestora/core/utils/color_app.dart';
 import 'package:zestora/futcher/ui/widgets/custem_batton.dart';
 import 'package:zestora/futcher/ui/widgets/custem_driver.dart';
@@ -6,7 +8,7 @@ import 'package:zestora/futcher/ui/widgets/custem_item_scoil.dart';
 import 'package:zestora/futcher/ui/widgets/custem_text_filed.dart';
 
 class SingUpPage extends StatelessWidget {
-   SingUpPage({super.key}); 
+  SingUpPage({super.key});
 
   final fromkey = GlobalKey<FormState>();
 
@@ -22,8 +24,7 @@ class SingUpPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
-                  SizedBox(height: 100,) ,
+                  SizedBox(height: 100),
                   Text(
                     "Sing UP",
                     style: TextStyle(
@@ -32,7 +33,7 @@ class SingUpPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-        
+
                   SizedBox(height: 20),
                   Align(
                     alignment: Alignment.centerLeft,
@@ -45,7 +46,7 @@ class SingUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 10),
                   CustomTextField(
                     hintText: "Enter Your Email",
@@ -61,9 +62,9 @@ class SingUpPage extends StatelessWidget {
                       return null;
                     },
                   ),
-        
+
                   const SizedBox(height: 20),
-        
+
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -75,9 +76,9 @@ class SingUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 10),
-        
+
                   CustomTextField(
                     hintText: "Enter Your Password",
                     prefixIcon: Icons.lock,
@@ -91,10 +92,10 @@ class SingUpPage extends StatelessWidget {
                       }
                       return null;
                     },
-                  ),   
-        
-                  SizedBox(height: 20,) , 
-        
+                  ),
+
+                  SizedBox(height: 20),
+
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -106,9 +107,9 @@ class SingUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 10),
-        
+
                   CustomTextField(
                     hintText: "Enter Your Password",
                     prefixIcon: Icons.lock,
@@ -123,11 +124,9 @@ class SingUpPage extends StatelessWidget {
                       return null;
                     },
                   ),
-        
-        
-        
+
                   SizedBox(height: 20),
-        
+
                   Align(
                     alignment: Alignment.centerRight,
                     child: Text(
@@ -139,17 +138,24 @@ class SingUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 20),
-        
-                  CustomGreenButton(text: "Sign in", onPressed: () {}),
-        
+
+                  CustomGreenButton(
+                    text: "Sign in",
+                    onPressed: () {
+                      if (fromkey.currentState!.validate()) {
+                        context.go(AppRouter.KHomePage);
+                      }
+                    },
+                  ),
+
                   SizedBox(height: 20),
-        
+
                   CustemDriver(),
-        
+
                   SizedBox(height: 20),
-        
+
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -161,9 +167,9 @@ class SingUpPage extends StatelessWidget {
                       CustemItemScoil(image: 'assets/scoil_imag/Google.png'),
                     ],
                   ),
-        
+
                   SizedBox(height: 20),
-        
+
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -176,10 +182,10 @@ class SingUpPage extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-        
+
                       TextButton(
                         onPressed: () {},
-        
+
                         child: Text(
                           "Sign Up",
                           style: TextStyle(

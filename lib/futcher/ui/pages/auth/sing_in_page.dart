@@ -111,7 +111,9 @@ class SingInPage extends StatelessWidget {
                 CustomGreenButton(
                   text: "Sign in", 
                   onPressed: () {
-
+                    if(fromkey.currentState!.validate()){
+                      context.go(AppRouter.KHomePage) ;
+                    }
                   }),
 
                 SizedBox(height: 20),
