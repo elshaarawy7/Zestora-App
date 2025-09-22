@@ -1,10 +1,22 @@
 import 'package:go_router/go_router.dart';
+import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_1.dart';
 
-class AppRouter { 
+class AppRouter {  
 
-  final GoRouter router = GoRouter(
+ final String kSplashScreen1 = '/splashScreen1';
+
+
+  static final GoRouter router = GoRouter(
     
-    routes: [] 
+    routes: [ 
+
+      GoRoute(
+        path: '/'  ,
+        builder: (context, state) => SplashScrean1(),
+      )
+
+    ]
+
 
     
 
