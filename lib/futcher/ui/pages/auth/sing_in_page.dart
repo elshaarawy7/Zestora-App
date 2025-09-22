@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:zestora/core/utils/color_app.dart';
+import 'package:zestora/futcher/ui/widgets/custem_batton.dart';
+import 'package:zestora/futcher/ui/widgets/custem_driver.dart';
+import 'package:zestora/futcher/ui/widgets/custem_item_scoil.dart';
 import 'package:zestora/futcher/ui/widgets/custem_text_filed.dart';
 
 class SingInPage extends StatelessWidget {
@@ -61,9 +65,39 @@ class SingInPage extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight, 
           child: Text("Forget Password ?" , style: TextStyle(
-            color: Colors.green , 
+            color: ColorApp.grean ,
+            fontSize: 16 , 
+            fontWeight: FontWeight.w500 ,   
           ),),
-        )
+        ) , 
+
+        SizedBox(height: 20,) , 
+
+        CustomGreenButton( 
+          text: "Sign in", 
+          onPressed: () {
+            
+          },
+        ) ,   
+         
+         SizedBox(height: 20,) , 
+
+         CustemDriver() , 
+
+         SizedBox(height: 20,) ,
+
+         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             CustemItemScoil(image: 'assets/scoil_imag/apple.png') ,
+             SizedBox(width: 30,) ,  
+             CustemItemScoil(image: 'assets/scoil_imag/Facebook.png'), 
+              SizedBox(width: 30,) ,  
+             CustemItemScoil(image: 'assets/scoil_imag/Google.png'),
+           ],
+         ) , 
+         
           
               ],
             ),
