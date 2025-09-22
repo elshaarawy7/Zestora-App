@@ -62,6 +62,10 @@ flutter:
   assets:
     - assets/Onboarding/
     - assets/scoil_imag/
+    - assets/Burger/ 
+    - assets/Fried Chiken/ 
+    - assets/Pizaa/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
