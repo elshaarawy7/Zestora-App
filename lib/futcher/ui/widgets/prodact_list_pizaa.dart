@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
 import 'package:zestora/futcher/ui/widgets/prodact_card.dart';
 
-class ProductListScreenAllProdact extends StatelessWidget {
+class ProdactListPizaa extends StatelessWidget {
   final List<ProdactModel> allProducts = [
 
   // 🍕 Pizaa
@@ -35,7 +35,7 @@ class ProductListScreenAllProdact extends StatelessWidget {
     reviews: "90",
   ),
   ProdactModel(
-    image: "assets/Pizaa/Frame 48095662.png",
+    image: "assets/Pizaa/Frame 48095662 (5).png",
     price: "220EGP",
     oldPrice: "350",
     rating: "4.4",
@@ -103,7 +103,6 @@ class ProductListScreenAllProdact extends StatelessWidget {
   ),
 ];
 
-
   @override
   Widget build(BuildContext context) {
     return  ListView.builder(
@@ -115,4 +114,5 @@ class ProductListScreenAllProdact extends StatelessWidget {
       );
 
   }
+
 }

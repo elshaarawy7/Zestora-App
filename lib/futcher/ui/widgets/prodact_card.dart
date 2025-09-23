@@ -20,7 +20,7 @@ class _ProductCardState extends State<ProductCard> {
       height: 300,
       width: 250,
       child: Card(
-        color: Colors.amber,
+        color: Colors.white,
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
@@ -31,7 +31,7 @@ class _ProductCardState extends State<ProductCard> {
             Image.asset(
               widget.product.image,
               width: double.infinity,
-              height: 175,
+              height: 200,
               fit: BoxFit.cover,
             ),
 
