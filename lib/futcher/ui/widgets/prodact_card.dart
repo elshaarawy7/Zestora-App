@@ -23,6 +23,10 @@ class ProductCard extends StatefulWidget {
 
 class _ProductCardState extends State<ProductCard> {
    bool isFavorat = false ;
+
+  final List<String> AllProdact = [
+    
+  ]; 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
