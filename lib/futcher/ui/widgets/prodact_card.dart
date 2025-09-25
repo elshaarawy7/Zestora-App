@@ -12,7 +12,7 @@ class ProductCard extends StatefulWidget {
 }
 
 class _ProductCardState extends State<ProductCard> {
-  bool isFavorat = false;
+  bool isFavorat = false ;
 
   @override
   Widget build(BuildContext context) {

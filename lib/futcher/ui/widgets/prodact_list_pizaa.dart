@@ -33,7 +33,7 @@ class ProdactListPizaa extends StatelessWidget {
     reviews: "90",
   ),
   ProdactModel(
-    image: "assets/Pizaa/Frame 48095662 (5).png",
+    image: "assets/Pizaa/Frame 48095662.png",
     price: "220EGP",
     oldPrice: "350",
     rating: "4.4",

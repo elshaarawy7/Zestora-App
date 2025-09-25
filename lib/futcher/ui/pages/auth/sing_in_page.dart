@@ -24,6 +24,7 @@ class SingInPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  SizedBox(height: 150,) ,
                   Text(
                     "Sing In",
                     style: TextStyle(

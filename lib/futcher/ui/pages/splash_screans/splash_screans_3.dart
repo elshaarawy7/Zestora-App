@@ -35,6 +35,8 @@ class SplashScreans3 extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             ) ,  
+
+            SizedBox(height: 10,) , 
         
              CustomGreenButton(
                   text: "Get Start", 

@@ -24,6 +24,21 @@ class ProdactListBuirger extends  StatelessWidget {
     oldPrice: "250",
     rating: "4.2",
     reviews: "130",
+  ), 
+
+  ProdactModel(
+    image: "assets/Burger/Frame 48095662 (7).png",
+    price: "210EGP",
+    oldPrice: "350",
+    rating: "4.3",
+    reviews: "150",
+  ),
+  ProdactModel(
+    image: "assets/Burger/Frame 48095662 (8).png",
+    price: "160EGP",
+    oldPrice: "250",
+    rating: "4.2",
+    reviews: "130",
   ),
 ];
 

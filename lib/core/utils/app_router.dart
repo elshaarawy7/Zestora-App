@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:zestora/futcher/ui/app/home_page.dart';
+import 'package:zestora/futcher/ui/app/manu/all_prodact.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_in_page.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_up.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_1.dart';
@@ -14,6 +15,7 @@ class AppRouter {
   static final String KSingIN = '/sing_in' ;
   static final String KSingUP = '/sing_up' ;
   static final String KHomePage = '/homePage' ;
+  static final String KAllProdact = '/all_prodact' ;
 
 
   static final GoRouter router = GoRouter(
@@ -48,6 +50,11 @@ class AppRouter {
       GoRoute(
         path: KHomePage , 
         builder: (context, state) => HomePage(),
+      ) , 
+
+      GoRoute(
+        path: KAllProdact , 
+        builder: (context, state) => AllProdact(),
       )
 
     ]
