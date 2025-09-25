@@ -1,39 +1,47 @@
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
 
-final List<ProdactModel> pizzaList = [
+final List<ProdactModel> pizzaProducts = [
   ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (1).png",
-    price: "200EGP",
-    oldPrice: "400",
-    rating: "4.5",
-    reviews: "120",
+    price: "210EGP",
+    oldPrice: "280",
+    rating: "4.8",
+    reviews: "150",
+    title: "Classic Beef Pizza",
   ),
   ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (2).png",
-    price: "99EGP",
-    oldPrice: "150",
-    rating: "4.8",
-    reviews: "100",
-  ),
-  ProdactModel(
+    price: "180EGP",
+    oldPrice: "230",
+    rating: "4.3",
+    reviews: "70",
+    title: "Fruit Pizza",
+  ), 
+
+   ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (3).png",
-    price: "150EGP",
-    oldPrice: "250",
-    rating: "4.7",
-    reviews: "85",
+    price: "210EGP",
+    oldPrice: "280",
+    rating: "4.8",
+    reviews: "150",
+    title: "Classic Beef Pizza",
   ),
   ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (4).png",
-    price: "175EGP",
-    oldPrice: "300",
-    rating: "4.6",
-    reviews: "90",
+    price: "180EGP",
+    oldPrice: "230",
+    rating: "4.3",
+    reviews: "70",
+    title: "Spaghetti souce",
   ),
-  ProdactModel(
-    image: "assets/Pizaa/Frame 48095662.png",
-    price: "220EGP",
-    oldPrice: "350",
-    rating: "4.4",
-    reviews: "60",
+
+   ProdactModel(
+    image: "assets/Pizaa/Frame 48095662 (3).png",
+    price: "210EGP",
+    oldPrice: "280",
+    rating: "4.8",
+    reviews: "150",
+    title: "Pasta with vegetables",
   ),
+  
 ];

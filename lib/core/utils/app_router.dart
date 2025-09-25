@@ -5,6 +5,8 @@ import 'package:zestora/futcher/ui/app/manu/burger_prodact.dart';
 import 'package:zestora/futcher/ui/app/manu/fired_chaked_prodact.dart';
 import 'package:zestora/futcher/ui/app/manu/pasta_prodact.dart';
 import 'package:zestora/futcher/ui/app/manu/pizaa_prodact.dart';
+import 'package:zestora/futcher/ui/app/prodatct_detiles.dart';
+import 'package:zestora/futcher/ui/model/prodact_model.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_in_page.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_up.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_1.dart';
@@ -24,6 +26,7 @@ class AppRouter {
   static final String KPataProdact = '/pasta_prodact' ;
   static final String KbuirgerProdact = '/buirger_prodact' ;
   static final String KFridChakedProdact = '/fried_chaken_prodact' ;
+  static final String KProductDetailsScreen = '/prodact_details_screen' ;
 
 
   static final GoRouter router = GoRouter(
@@ -83,7 +86,17 @@ class AppRouter {
       GoRoute(
         path: KFridChakedProdact , 
         builder: (context, state) =>FiredChakedProdact(),
-      )
+      ) ,  
+
+        GoRoute(
+        path: KProductDetailsScreen , 
+        builder: (context, state) {
+           final product = state.extra as ProdactModel; // استقبل الـ extra
+           return ProductDetailsScreen(product: product);
+        },
+      ) , 
+
+      
 
 
     ]
