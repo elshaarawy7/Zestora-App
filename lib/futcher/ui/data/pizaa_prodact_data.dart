@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
-import 'package:zestora/futcher/ui/widgets/prodact_card.dart';
 
-class ProdactListPizaa extends StatelessWidget {
-  final List<ProdactModel> pizzaList = [
+final List<ProdactModel> pizzaList = [
   ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (1).png",
     price: "200EGP",
@@ -40,18 +37,3 @@ class ProdactListPizaa extends StatelessWidget {
     reviews: "60",
   ),
 ];
-
-
-  @override
-  Widget build(BuildContext context) {
-    return  ListView.builder(
-        scrollDirection: Axis.horizontal, // لو عاوزها سلايدر
-        itemCount: pizzaList.length,
-        itemBuilder: (context, index) {
-          return ProductCard(product:pizzaList [index]);
-        },
-      );
-
-  }
-
-}

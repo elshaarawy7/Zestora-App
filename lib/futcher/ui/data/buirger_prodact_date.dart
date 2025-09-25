@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
-import 'package:zestora/futcher/ui/widgets/prodact_card.dart';
 
-class ProdactListBuirger extends  StatelessWidget {
-  final List<ProdactModel> burgerList = [
+final List<ProdactModel> burgerList = [
   ProdactModel(
     image: "assets/Burger/Frame 48095662 (6).png",
     price: "180EGP",
@@ -41,16 +38,3 @@ class ProdactListBuirger extends  StatelessWidget {
     reviews: "130",
   ),
 ];
-
-  Widget build(BuildContext context) {
-    return  ListView.builder(
-        scrollDirection: Axis.horizontal, // لو عاوزها سلايدر
-        itemCount: burgerList.length,
-        itemBuilder: (context, index) {
-          return ProductCard(product:burgerList [index]);
-        },
-      );
-
-  }
-
-} 

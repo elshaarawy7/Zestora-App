@@ -1,6 +1,9 @@
 import 'package:go_router/go_router.dart';
 import 'package:zestora/futcher/ui/app/home_page.dart';
 import 'package:zestora/futcher/ui/app/manu/all_prodact.dart';
+import 'package:zestora/futcher/ui/app/manu/burger_prodact.dart';
+import 'package:zestora/futcher/ui/app/manu/fired_chaked_prodact.dart';
+import 'package:zestora/futcher/ui/app/manu/pasta_prodact.dart';
 import 'package:zestora/futcher/ui/app/manu/pizaa_prodact.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_in_page.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_up.dart';
@@ -18,6 +21,9 @@ class AppRouter {
   static final String KHomePage = '/homePage' ;
   static final String KAllProdact = '/all_prodact' ;
   static final String KPizaaProdact = '/pizaa_prodact' ;
+  static final String KPataProdact = '/pasta_prodact' ;
+  static final String KbuirgerProdact = '/buirger_prodact' ;
+  static final String KFridChakedProdact = '/fried_chaken_prodact' ;
 
 
   static final GoRouter router = GoRouter(
@@ -62,7 +68,23 @@ class AppRouter {
       GoRoute(
         path: KPizaaProdact , 
         builder: (context, state) => PizaaProdact(),
+      ) , 
+
+       GoRoute(
+        path: KPataProdact , 
+        builder: (context, state) => PastaProdact(),
+      ) ,  
+
+      GoRoute(
+        path: KbuirgerProdact , 
+        builder: (context, state) => BurgerProdact(),
+      ) , 
+
+      GoRoute(
+        path: KFridChakedProdact , 
+        builder: (context, state) =>FiredChakedProdact(),
       )
+
 
     ]
 
