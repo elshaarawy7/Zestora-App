@@ -16,11 +16,13 @@ class _CustemCatogoryState extends State<CustemCatogory> {
     {
       "name": "All",
       "image":
-          "assets/catogries/0e86e8db69785e25c6aee709fb249fb4ba056920.jpg", // تقدر تحط IconData أو مسار صورة
+          "assets/catogries/0e86e8db69785e25c6aee709fb249fb4ba056920.jpg", 
+      "route":AppRouter.KAllProdact   
     },
     {
       "name": "Pizza",
       "image": "assets/catogries/ef8dd5edf6100579125f303fe5259e7967ff5ddc.jpg",
+      "route":AppRouter.KPizaaProdact
     },
     {
       "name": "Burger",
@@ -50,65 +52,61 @@ class _CustemCatogoryState extends State<CustemCatogory> {
               setState(() {
                 selectedIndex = index;
               });
+              context.go(categories[index]['route']);
             },
             child: Row(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    context.go(AppRouter.KAllProdact) ;
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.all(8),
-                    height: 40,
-                    
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                    ), // 👈 بدل width
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xFFFFFFFF),
-                      border: Border.all(
-                        color: selectedIndex == index
-                            ? Colors.green
-                            : Colors.grey, // ✅ واحد بس
-                        width: 3,
+                Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 40,
+                  
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                  ), // 👈 بدل width
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: const Color(0xFFFFFFFF),
+                    border: Border.all(
+                      color: selectedIndex == index
+                          ? Colors.green
+                          : Colors.grey, // ✅ واحد بس
+                      width: 3,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 5,
+                        offset: Offset(0, 2),
                       ),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 5,
-                          offset: Offset(0, 2),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 6),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          categories[index]['image'],
+                          height: 30,
+                          width: 30,
+                          fit: BoxFit.cover,
+                        ),
+                        SizedBox(width: 3),
+                
+                        Center(
+                          child: Text(
+                            categories[index]['name'],
+                            style: TextStyle(
+                              color: selectedIndex == index
+                                  ? Colors.green
+                                  : Colors.grey,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                          ),
                         ),
                       ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 6),
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            categories[index]['image'],
-                            height: 30,
-                            width: 30,
-                            fit: BoxFit.cover,
-                          ),
-                          SizedBox(width: 3),
-                  
-                          Center(
-                            child: Text(
-                              categories[index]['name'],
-                              style: TextStyle(
-                                color: selectedIndex == index
-                                    ? Colors.green
-                                    : Colors.grey,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                              ),
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
                   ),
                 ),
