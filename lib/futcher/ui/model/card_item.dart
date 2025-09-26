@@ -1,6 +1,7 @@
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
 
 class CartItem {
+  
   final ProdactModel product;
   final String size;
   final int quantity;

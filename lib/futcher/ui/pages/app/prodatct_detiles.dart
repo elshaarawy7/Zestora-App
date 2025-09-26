@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zestora/core/utils/app_router.dart';
+import 'package:zestora/futcher/ui/model/card_item.dart';
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
 import 'package:zestora/futcher/ui/widgets/quintity_selector.dart';
 
@@ -66,7 +67,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
-                widget.product.image , 
+                widget.product.image,
                 height: 350,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -215,7 +216,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             const SizedBox(height: 16),
 
             // وصف المنتج (ممكن تضيفه في الموديل)
-           
 
             // زر الإضافة للسلة
             SizedBox(
@@ -229,8 +229,22 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   ),
                 ),
                 onPressed: () {
-                  context.go(AppRouter.KCardPage);
+                  double basePrice = widget.product.sizes[selectedSize] ?? 0.0;
+                  double totalPrice = basePrice * quantity;
+
+                  final cartItem = CartItem(
+                    product: widget.product,
+                    size: selectedSize,
+                    quantity: quantity,
+                    totalPrice: totalPrice,
+                  );
+
+                  context.push(
+                    AppRouter.KCardPage,
+                    extra: [cartItem], // بعتنا الليست فيها منتج واحد كبداية
+                  );
                 },
+
                 child: Text(
                   "Add to Cart",
                   style: const TextStyle(
