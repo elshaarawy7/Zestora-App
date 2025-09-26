@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:zestora/futcher/ui/pages/app/card_page.dart';
 import 'package:zestora/futcher/ui/pages/app/home_page.dart';
 import 'package:zestora/futcher/ui/pages/app/manu/all_prodact.dart';
 import 'package:zestora/futcher/ui/pages/app/manu/burger_prodact.dart';
@@ -27,6 +28,7 @@ class AppRouter {
   static final String KbuirgerProdact = '/buirger_prodact' ;
   static final String KFridChakedProdact = '/fried_chaken_prodact' ;
   static final String KProductDetailsScreen = '/prodact_details_screen' ;
+  static final String KCardPage = '/card_page' ;
 
 
   static final GoRouter router = GoRouter(
@@ -94,7 +96,12 @@ class AppRouter {
            final product = state.extra as ProdactModel; // استقبل الـ extra
            return ProductDetailsScreen(product: product);
         },
-      ) , 
+      ) ,  
+
+      GoRoute(
+        path: KCardPage , 
+        builder: (context, state) => CardPage(),
+      )
 
       
 
