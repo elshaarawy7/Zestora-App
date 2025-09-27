@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zestora/futcher/ui/model/card_item.dart';
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
@@ -79,7 +80,7 @@ class AppRouter {
         name: AppRouter.KCardPage,
         builder: (context, state) {
           final cartItems = state.extra as List<CartItem>;
-          return CardPage(cartItems: cartItems);
+          return CardPage();
         },
       ),
     ],

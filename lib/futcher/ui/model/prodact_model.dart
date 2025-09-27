@@ -16,4 +16,6 @@ class ProdactModel {
     required this.rating,
     required this.reviews,
   });
+
+  get quantity => null;
 }
