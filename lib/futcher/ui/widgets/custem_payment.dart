@@ -41,7 +41,7 @@ class CustemPayment extends StatelessWidget {
           height: 75, // 👈 حجم أصغر
           width: 75,
           child: SvgPicture.asset(
-            "assets/pyment/Group.svg",
+            "assets/pyment/strip/SVGRepo_iconCarrier.svg",
             fit: BoxFit.contain, // 👈 يخليها تتظبط جوه الـ SizedBox
           ),
         ),
