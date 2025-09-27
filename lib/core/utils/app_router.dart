@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zestora/futcher/ui/model/card_item.dart';
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
+import 'package:zestora/futcher/ui/pages/app/acount_detiles.dart';
 import 'package:zestora/futcher/ui/pages/app/card_page.dart';
 import 'package:zestora/futcher/ui/pages/app/home_page.dart';
 import 'package:zestora/futcher/ui/pages/app/manu/all_prodact.dart';
@@ -30,6 +31,7 @@ class AppRouter {
   static final String KFridChakedProdact = '/fried_chaken_prodact';
   static final String KProductDetailsScreen = '/prodact_details_screen';
   static final String KCardPage = '/card_page';
+  static final String KAcountDetales = '/acount_detiles' ; 
 
   static final GoRouter router = GoRouter(
     routes: [
@@ -82,7 +84,12 @@ class AppRouter {
           final cartItems = state.extra as List<CartItem>;
           return CardPage();
         },
-      ),
+      ), 
+
+      GoRoute(
+        path: KAcountDetales , 
+        builder: (context, state) => AcountDetiles(),
+      )
     ],
   );
 }
