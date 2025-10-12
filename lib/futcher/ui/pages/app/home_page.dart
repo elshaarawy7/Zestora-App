@@ -70,30 +70,32 @@ class _HomePageState extends State<HomePage> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ), 
+                          ),
 
-                          SizedBox(height: 5,) ,
+                          SizedBox(height: 5),
 
-                          Text("Delicious Food, Free order" , style: TextStyle(
-                            color: Colors.white  , 
-                            fontSize: 16 , 
-                          ),) , 
+                          Text(
+                            "Delicious Food, Free order",
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
 
-                          SizedBox(height: 5,) ,
+                          SizedBox(height: 5),
 
                           Container(
-                            height:45 ,
+                            height: 45,
                             width: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               color: ColorApp.grean,
                             ),
                             child: Center(
-                              child: Text("Order Now" , style: TextStyle(
-                                color: Colors.white , 
-                                fontSize: 18
-                              ), 
-                              textAlign: TextAlign.center,
+                              child: Text(
+                                "Order Now",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                           ),
@@ -141,22 +143,30 @@ class _HomePageState extends State<HomePage> {
 
             SizedBox(height: 10),
 
-            Expanded(child: CustemCatogory()), 
-            SizedBox(height: 20,) , 
+            Expanded(child: CustemCatogory()),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Recommendation" , style: TextStyle(
-                  color: Colors.black , fontSize: 20 , 
-                  fontWeight: FontWeight.bold , 
-                ),) , 
+                Text(
+                  "Recommendation",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
 
-                Text("see all" , style: TextStyle(
-                  color: Colors.black , fontSize: 18 , 
-                  fontWeight: FontWeight.w500 , 
-                ),) , 
+                Text(
+                  "see all",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ],
-            ) ,
+            ),
             SizedBox(height: 20),
             SizedBox(height: 350, child: ProductListScreenAllProdact()),
           ],

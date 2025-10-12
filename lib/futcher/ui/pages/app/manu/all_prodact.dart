@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zestora/core/utils/app_router.dart';
-import 'package:zestora/futcher/ui/data/all_prodact_data.dart';
+import 'package:zestora/futcher/ui/data_ui/all_prodact_data.dart';
 import 'package:zestora/futcher/ui/widgets/custem_catogry.dart';
 import 'package:zestora/futcher/ui/widgets/custem_text_filed.dart';
 import 'package:zestora/futcher/ui/widgets/prodact_card_manu.dart';
 
 class AllProdact extends StatefulWidget {
   const AllProdact({super.key});
-
-
 
   @override
   State<AllProdact> createState() => _AllProdactState();
@@ -30,7 +28,7 @@ class _AllProdactState extends State<AllProdact> {
         ),
       ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 12),
+        padding: EdgeInsets.symmetric(horizontal: 12),
         child: ListView(
           children: [
             const CustomTextField(
@@ -41,7 +39,7 @@ class _AllProdactState extends State<AllProdact> {
             const SizedBox(height: 10),
             const CustemCatogory(),
             const SizedBox(height: 10),
-             ProdactCardManu(products: allProducts), 
+            ProdactCardManu(products: allProducts),
           ],
         ),
       ),

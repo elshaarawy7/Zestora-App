@@ -12,7 +12,7 @@ class ProductCard extends StatefulWidget {
 }
 
 class _ProductCardState extends State<ProductCard> {
-  bool isFavorat = false ;
+  bool isFavorat = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +22,7 @@ class _ProductCardState extends State<ProductCard> {
       child: Card(
         color: Colors.white,
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

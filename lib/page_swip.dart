@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_in_page.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_1.dart';
@@ -14,26 +12,23 @@ class PageSwip extends StatefulWidget {
 }
 
 class _PageSwipState extends State<PageSwip> {
+  final PageController pageController = PageController(initialPage: 0);
 
-  final PageController pageController = PageController(initialPage: 0) ; 
-
-  @override 
-
+  @override
   void dispose() {
     pageController.dispose();
     super.dispose();
   }
+
   Widget build(BuildContext context) {
     return PageView(
-      controller: pageController, 
+      controller: pageController,
       children: [
-     
-        SplashScrean1() , 
-        SplashScrean2() , 
-        SplashScreans3() ,
-        SingInPage() ,
+        SplashScrean1(),
+        SplashScrean2(),
+        SplashScreans3(),
+        SingInPage(),
       ],
     );
   }
 }
-

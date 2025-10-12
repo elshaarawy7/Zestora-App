@@ -236,12 +236,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     product: widget.product,
                     size: selectedSize,
                     quantity: quantity,
-                    
                   );
 
                   context.push(
                     AppRouter.KCardPage,
-                    extra: [cartItem ], // بعتنا الليست فيها منتج واحد كبداية
+                    extra: [cartItem], // بعتنا الليست فيها منتج واحد كبداية
                   );
                 },
 

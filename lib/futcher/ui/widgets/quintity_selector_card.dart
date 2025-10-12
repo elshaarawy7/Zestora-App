@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class QuintitySelectorCard extends StatefulWidget {
@@ -36,9 +35,9 @@ class _QuintitySelectorCardState extends State<QuintitySelectorCard> {
   void _remove() {
     setState(() {
       if (quantity > 1) {
-        quantity-- ;
+        quantity--;
       } else {
-         widget.onRemove?.call();
+        widget.onRemove?.call();
       }
     });
   }
@@ -56,7 +55,7 @@ class _QuintitySelectorCardState extends State<QuintitySelectorCard> {
         ),
         SizedBox(width: 10),
 
-         Padding(
+        Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Text(
             "$quantity",

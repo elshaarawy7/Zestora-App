@@ -32,8 +32,8 @@ class AppRouter {
   static final String KFridChakedProdact = '/fried_chaken_prodact';
   static final String KProductDetailsScreen = '/prodact_details_screen';
   static final String KCardPage = '/card_page';
-  static final String KAcountDetales = '/acount_detiles' ;  
-  static final String KpaymentPage ='/payment_page' ;
+  static final String KAcountDetales = '/acount_detiles';
+  static final String KpaymentPage = '/payment_page';
 
   static final GoRouter router = GoRouter(
     routes: [
@@ -86,17 +86,14 @@ class AppRouter {
           final cartItems = state.extra as List<CartItem>;
           return CardPage();
         },
-      ), 
+      ),
 
       GoRoute(
-        path: KAcountDetales , 
+        path: KAcountDetales,
         builder: (context, state) => AcountDetiles(),
-      ) , 
+      ),
 
-      GoRoute(
-        path: KpaymentPage , 
-        builder: (context, state) => PaymentPage(),
-      )
+      GoRoute(path: KpaymentPage, builder: (context, state) => PaymentPage()),
     ],
   );
 }

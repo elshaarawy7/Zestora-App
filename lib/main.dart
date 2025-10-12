@@ -13,11 +13,9 @@ class ZestoraApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-       routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner: false, 
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white , 
-      ),
+      routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
     );
   }
 }

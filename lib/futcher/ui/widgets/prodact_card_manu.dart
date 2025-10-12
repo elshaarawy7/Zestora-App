@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zestora/core/utils/app_router.dart';
-import 'package:zestora/futcher/ui/data/all_prodact_data.dart';
-import 'package:zestora/futcher/ui/data/cart_data.dart'; // ✅ cartItems global
+import 'package:zestora/futcher/ui/data_ui/all_prodact_data.dart';
+import 'package:zestora/futcher/ui/data_ui/cart_data.dart'; // ✅ cartItems global
 import 'package:zestora/futcher/ui/model/prodact_model.dart';
 import 'package:zestora/futcher/ui/model/card_item.dart'; // ✅ CartItem model
 
@@ -115,16 +115,19 @@ class _ProdactCardManuState extends State<ProdactCardManu> {
                                 setState(() {
                                   // لو المنتج موجود في الكارت نزود كميته
                                   final existingIndex = cartItems.indexWhere(
-                                      (c) => c.product.title == product.title);
+                                    (c) => c.product.title == product.title,
+                                  );
 
                                   if (existingIndex >= 0) {
                                     cartItems[existingIndex].quantity++;
                                   } else {
-                                    cartItems.add(CartItem(
-                                      product: product,
-                                      size: 'Medium',
-                                      quantity: 1,
-                                    ));
+                                    cartItems.add(
+                                      CartItem(
+                                        product: product,
+                                        size: 'Medium',
+                                        quantity: 1,
+                                      ),
+                                    );
                                   }
                                 });
 
@@ -132,12 +135,16 @@ class _ProdactCardManuState extends State<ProdactCardManu> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                        "${product.title} added to cart"),
+                                      "${product.title} added to cart",
+                                    ),
                                   ),
                                 );
                               },
-                              icon: const Icon(Icons.add,
-                                  color: Colors.white, size: 18),
+                              icon: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 18,
+                              ),
                             ),
                           ),
                         ),

@@ -14,35 +14,40 @@ class SplashScrean1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/Onboarding/eating vegan food-rafiki 1.png") , 
-            SizedBox(height: 10,) , 
-        
-            Text("Choose Your Favorite Meal" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 25 , 
-              fontWeight: FontWeight.bold 
-            ),) , 
-        
-            SizedBox(height: 20,) , 
-        
-            Text("Browse a wide variety of restaurants and discover delicious dishes" , style: TextStyle(
-              color: Colors.grey , 
-              fontSize: 16 , 
-              fontWeight: FontWeight.w500 , 
-            ) , 
-            maxLines: 2, 
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
-            ) ,  
+            Image.asset("assets/Onboarding/eating vegan food-rafiki 1.png"),
+            SizedBox(height: 10),
 
-            SizedBox(height: 20,) , 
-        
+            Text(
+              "Choose Your Favorite Meal",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            Text(
+              "Browse a wide variety of restaurants and discover delicious dishes",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+            ),
+
+            SizedBox(height: 20),
+
             CustomGreenButton(
-              text: "Next", 
+              text: "Next",
               onPressed: () {
                 context.go(AppRouter.kSplashScreen2);
               },
-            ) , 
+            ),
           ],
         ),
       ),

@@ -6,11 +6,7 @@ class CartItem {
   String size;
   int quantity;
 
-  CartItem({
-    required this.product,
-    this.size = 'Medium',
-    this.quantity = 1,
-  });
+  CartItem({required this.product, this.size = 'Medium', this.quantity = 1});
 
   double get unitPrice {
     final raw = product.price.replaceAll(RegExp(r'[^0-9.]'), '');

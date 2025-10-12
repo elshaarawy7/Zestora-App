@@ -15,29 +15,28 @@ class _CustemCatogoryState extends State<CustemCatogory> {
   final List<Map<String, dynamic>> categories = [
     {
       "name": "All",
-      "image":
-          "assets/catogries/0e86e8db69785e25c6aee709fb249fb4ba056920.jpg", 
-      "route":AppRouter.KAllProdact   
+      "image": "assets/catogries/0e86e8db69785e25c6aee709fb249fb4ba056920.jpg",
+      "route": AppRouter.KAllProdact,
     },
     {
       "name": "Pizza",
       "image": "assets/catogries/ef8dd5edf6100579125f303fe5259e7967ff5ddc.jpg",
-      "route":AppRouter.KPizaaProdact
+      "route": AppRouter.KPizaaProdact,
     },
     {
       "name": "Burger",
       "image": "assets/catogries/3e1e7f9d03a62022acc68f46396ea5a5a96188b1.jpg",
-      "route":AppRouter.KbuirgerProdact , 
+      "route": AppRouter.KbuirgerProdact,
     },
     {
       "name": "Fried Chiken",
       "image": 'assets/catogries/df6686362ccfee3dd5891eb7c2c64010b8aa7aa7.jpg',
-      "route":AppRouter.KFridChakedProdact , 
+      "route": AppRouter.KFridChakedProdact,
     },
     {
       "name": "Pasta",
       "image": "assets/catogries/0e86e8db69785e25c6aee709fb249fb4ba056920.jpg",
-      "route":AppRouter.KPataProdact , 
+      "route": AppRouter.KPataProdact,
     },
   ];
 
@@ -62,7 +61,7 @@ class _CustemCatogoryState extends State<CustemCatogory> {
                 Container(
                   margin: const EdgeInsets.all(8),
                   height: 40,
-                  
+
                   padding: const EdgeInsets.symmetric(
                     horizontal: 12,
                   ), // 👈 بدل width
@@ -94,7 +93,7 @@ class _CustemCatogoryState extends State<CustemCatogory> {
                           fit: BoxFit.cover,
                         ),
                         SizedBox(width: 3),
-                
+
                         Center(
                           child: Text(
                             categories[index]['name'],

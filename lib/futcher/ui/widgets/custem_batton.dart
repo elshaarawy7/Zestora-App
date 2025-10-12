@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zestora/core/utils/color_app.dart';
 
 class CustomGreenButton extends StatelessWidget {
-  final String text;   // التكست المتغير
+  final String text; // التكست المتغير
   final VoidCallback onPressed; // عشان تحدد الاكشن
 
   const CustomGreenButton({
@@ -14,7 +14,7 @@ class CustomGreenButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity ,  // 75% من عرض الشاشة
+      width: double.infinity, // 75% من عرض الشاشة
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(

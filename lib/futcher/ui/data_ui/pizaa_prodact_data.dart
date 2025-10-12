@@ -16,9 +16,9 @@ final List<ProdactModel> pizzaProducts = [
     rating: "4.3",
     reviews: "70",
     title: "Fruit Pizza",
-  ), 
+  ),
 
-   ProdactModel(
+  ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (3).png",
     price: "210EGP",
     oldPrice: "280",
@@ -35,7 +35,7 @@ final List<ProdactModel> pizzaProducts = [
     title: "Spaghetti souce",
   ),
 
-   ProdactModel(
+  ProdactModel(
     image: "assets/Pizaa/Frame 48095662 (3).png",
     price: "210EGP",
     oldPrice: "280",
@@ -43,5 +43,4 @@ final List<ProdactModel> pizzaProducts = [
     reviews: "150",
     title: "Pasta with vegetables",
   ),
-  
 ];

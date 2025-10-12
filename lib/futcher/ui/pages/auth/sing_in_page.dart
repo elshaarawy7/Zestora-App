@@ -15,7 +15,7 @@ class SingInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView( 
+      body: SingleChildScrollView(
         child: Form(
           key: fromkey,
           child: Padding(
@@ -24,7 +24,7 @@ class SingInPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 150,) ,
+                  SizedBox(height: 150),
                   Text(
                     "Sing In",
                     style: TextStyle(
@@ -33,7 +33,7 @@ class SingInPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-        
+
                   SizedBox(height: 20),
                   Align(
                     alignment: Alignment.centerLeft,
@@ -46,7 +46,7 @@ class SingInPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 10),
                   CustomTextField(
                     hintText: "Enter Your Email",
@@ -62,9 +62,9 @@ class SingInPage extends StatelessWidget {
                       return null;
                     },
                   ),
-        
+
                   const SizedBox(height: 20),
-        
+
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -76,9 +76,9 @@ class SingInPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 10),
-        
+
                   CustomTextField(
                     hintText: "Enter Your Password",
                     prefixIcon: Icons.lock,
@@ -93,9 +93,9 @@ class SingInPage extends StatelessWidget {
                       return null;
                     },
                   ),
-        
+
                   SizedBox(height: 20),
-        
+
                   Align(
                     alignment: Alignment.centerRight,
                     child: Text(
@@ -107,23 +107,24 @@ class SingInPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 20),
-        
+
                   CustomGreenButton(
-                    text: "Sign in", 
+                    text: "Sign in",
                     onPressed: () {
-                      if(fromkey.currentState!.validate()){
-                        context.go(AppRouter.KHomePage) ;
+                      if (fromkey.currentState!.validate()) {
+                        context.go(AppRouter.KHomePage);
                       }
-                    }),
-        
+                    },
+                  ),
+
                   SizedBox(height: 20),
-        
+
                   CustemDriver(),
-        
+
                   SizedBox(height: 20),
-        
+
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -135,9 +136,9 @@ class SingInPage extends StatelessWidget {
                       CustemItemScoil(image: 'assets/scoil_imag/Google.png'),
                     ],
                   ),
-        
+
                   SizedBox(height: 20),
-        
+
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -150,12 +151,12 @@ class SingInPage extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-        
+
                       TextButton(
                         onPressed: () {
                           context.go(AppRouter.KSingUP);
                         },
-        
+
                         child: Text(
                           "Sign Up",
                           style: TextStyle(

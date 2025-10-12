@@ -16,7 +16,7 @@ final List<ProdactModel> burgerList = [
     rating: "4.4",
     reviews: "130",
     title: "Double Beef Burger",
-  ), 
+  ),
 
   ProdactModel(
     image: "assets/Burger/Frame 48095662 (7).png",
@@ -25,7 +25,7 @@ final List<ProdactModel> burgerList = [
     rating: "4.4",
     reviews: "130",
     title: "Double Beef Burger",
-  ), 
+  ),
 
   ProdactModel(
     image: "assets/Burger/Frame 48095662 (8).png",

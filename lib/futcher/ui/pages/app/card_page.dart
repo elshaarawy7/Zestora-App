@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zestora/core/utils/app_router.dart';
-import 'package:zestora/futcher/ui/data/cart_data.dart';
+import 'package:zestora/futcher/ui/data_ui/cart_data.dart';
 import 'package:zestora/futcher/ui/widgets/quintity_selector_card.dart';
 
 class CardPage extends StatefulWidget {
@@ -138,7 +138,7 @@ class _CardPageState extends State<CardPage> {
 
             ElevatedButton(
               onPressed: () {
-                context.go(AppRouter.KAcountDetales) ; 
+                context.go(AppRouter.KAcountDetales);
               },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(

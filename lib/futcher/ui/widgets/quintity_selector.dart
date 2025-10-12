@@ -4,11 +4,7 @@ class QuantitySelector extends StatefulWidget {
   final int initialValue;
   final ValueChanged<int>? onChanged;
 
-  const QuantitySelector({
-    super.key,
-    this.initialValue = 1,
-    this.onChanged,
-  });
+  const QuantitySelector({super.key, this.initialValue = 1, this.onChanged});
 
   @override
   State<QuantitySelector> createState() => _QuantitySelectorState();
@@ -44,8 +40,6 @@ class _QuantitySelectorState extends State<QuantitySelector> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-
-        
         // زرار ناقص
         CircleAvatar(
           backgroundColor: const Color(0xffF4F7F2),
