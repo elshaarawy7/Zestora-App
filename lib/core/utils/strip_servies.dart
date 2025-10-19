@@ -32,16 +32,18 @@ class StripServies {
       )
      ) ; 
 
-     Future disPlayPaymentSheet() async{
+     
+   }  
+
+    Future disPlayPaymentSheet() async{
       await Stripe.instance.presentCustomerSheet();
      } 
 
-     Future mackpayment({required PaymentIntetInputModel paymentIntetInputModel}) async{
+    Future mackpayment({required PaymentIntetInputModel paymentIntetInputModel}) async{
       var paymentIntetModel = await createPaymentIntet(paymentIntetInputModel) ; 
       await initPaymentSheat(
         PaymentClientSycreat: paymentIntetModel.clientSecret!
       ) ; 
       await disPlayPaymentSheet() ;
      }
-   }
 }
