@@ -5,18 +5,19 @@ import 'package:zestora/core/utils/strip_servies.dart';
 import 'package:zestora/futcher/data/model/payment_intet_input_model.dart';
 import 'package:zestora/futcher/logic/repos/check_oyt_repo.dart';
 
-class CheakoutRepoImpl extends CheckOytRepo { 
+class CheakoutRepoImpl extends CheckOytRepo {
   final StripServies stripServies = StripServies();
   @override
-  Future<Either<Fuiler, void>> mackPayment({required PaymentIntetInputModel paymentIntetInputModel}) async {
-     
-      try {
-  await stripServies.mackpayment(paymentIntetInputModel: paymentIntetInputModel) ; 
-  return right(null) ; 
-}  catch (e) {
-   return left(SelverFuiler(errorMassge: e.toString())) ;
+  Future<Either<Fuiler, void>> mackPayment({
+    required PaymentIntetInputModel paymentIntetInputModel,
+  }) async {
+    try {
+      await stripServies.mackpayment(
+        paymentIntetInputModel: paymentIntetInputModel,
+      );
+      return right(null);
+    } catch (e) {
+      return left(SelverFuiler(errorMassge: e.toString()));
+    }
+  }
 }
-  } 
-
- 
-} 

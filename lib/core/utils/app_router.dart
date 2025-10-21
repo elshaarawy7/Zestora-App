@@ -12,6 +12,7 @@ import 'package:zestora/futcher/ui/pages/app/manu/pasta_prodact.dart';
 import 'package:zestora/futcher/ui/pages/app/manu/pizaa_prodact.dart';
 import 'package:zestora/futcher/ui/pages/app/payment_page.dart';
 import 'package:zestora/futcher/ui/pages/app/prodatct_detiles.dart';
+import 'package:zestora/futcher/ui/pages/app/thank_you_view_page.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_in_page.dart';
 import 'package:zestora/futcher/ui/pages/auth/sing_up.dart';
 import 'package:zestora/futcher/ui/pages/splash_screans/splash_screan_1.dart';
@@ -34,6 +35,7 @@ class AppRouter {
   static final String KCardPage = '/card_page';
   static final String KAcountDetales = '/acount_detiles';
   static final String KpaymentPage = '/payment_page';
+  static final String thenkViewPage = 'thenk_view_page';
 
   static final GoRouter router = GoRouter(
     routes: [
@@ -94,6 +96,11 @@ class AppRouter {
       ),
 
       GoRoute(path: KpaymentPage, builder: (context, state) => PaymentPage()),
+
+      GoRoute(
+        path: thenkViewPage,
+        builder: (context, state) => ThankYouViewPage(),
+      ),
     ],
   );
 }

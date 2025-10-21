@@ -3,14 +3,14 @@ import 'package:zestora/core/utils/color_app.dart';
 
 class CustomGreenButton extends StatelessWidget {
   final String text; // التكست المتغير
-  final VoidCallback onPressed; // عشان تحدد الاكشن 
-  final bool isLoding ;
+  final VoidCallback onPressed; // عشان تحدد الاكشن
+  final bool isLoding;
 
   const CustomGreenButton({
     super.key,
     required this.text,
     required this.onPressed,
-    this.isLoding =  false ,
+    this.isLoding = false,
   });
 
   @override
@@ -26,14 +26,16 @@ class CustomGreenButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: isLoding ? CircularProgressIndicator() :  Text(
-          text,
-          style: const TextStyle(
-            color: Colors.white, // التكست أبيض
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        child: isLoding
+            ? CircularProgressIndicator()
+            : Text(
+                text,
+                style: const TextStyle(
+                  color: Colors.white, // التكست أبيض
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
       ),
     );
   }

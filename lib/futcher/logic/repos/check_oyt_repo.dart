@@ -7,4 +7,3 @@ abstract class CheckOytRepo {
     required PaymentIntetInputModel paymentIntetInputModel,
   });
 }
- 

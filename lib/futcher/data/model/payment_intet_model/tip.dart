@@ -1,13 +1,24 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'tip.g.dart';
+
+@JsonSerializable()
 class Tip {
-  Tip();
+  final String? id;
+  final double? amount;
+  final String? currency;
+
+  Tip({this.id, this.amount, this.currency});
 
   factory Tip.fromJson(Map<String, dynamic> json) {
-    // TODO: implement fromJson
-    throw UnimplementedError('Tip.fromJson($json) is not implemented');
+    return Tip(
+      id: json['id'] as String?,
+      amount: (json['amount'] as num?)?.toDouble(),
+      currency: json['currency'] as String?,
+    );
   }
 
   Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
+    return {'id': id, 'amount': amount, 'currency': currency};
   }
 }
