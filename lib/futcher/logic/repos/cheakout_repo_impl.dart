@@ -12,8 +12,8 @@ class CheakoutRepoImpl extends CheckOytRepo {
     required PaymentIntetInputModel paymentIntetInputModel,
   }) async {
     try {
-      await stripServies.mackpayment(
-        paymentIntetInputModel: paymentIntetInputModel,
+      await stripServies.mackupPayment(
+        paymentInputModel: paymentIntetInputModel,
       );
       return right(null);
     } catch (e) {
